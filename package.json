@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ignacio Tejera",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.14.2"
