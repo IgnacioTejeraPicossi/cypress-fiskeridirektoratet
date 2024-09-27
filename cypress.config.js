@@ -10,4 +10,12 @@ module.exports = defineConfig({
       // Legg til event-håndterere hvis nødvendig
     },
   },
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/reports',
+    overwrite: false,
+    html: true,
+    json: false,
+  },
+
 });
