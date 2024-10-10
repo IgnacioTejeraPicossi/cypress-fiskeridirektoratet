@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('login', () => {
+    cy.fixture('credentials').then((creds) => {
+      cy.request({
+        method: 'POST',
+        url: 'http://localhost:8080/admin/site/preview/default/draft/no',
+        body: {
+          username: creds.username,
+          password: creds.password,
+        },
+        failOnStatusCode: false // Forhindrer at testen mislykkes hvis den mottar en statuskode som ikke går ut.
+      }).then((response) => {
+        cy.setCookie('nombre_de_la_cookie', response.body.token);
+      });
+    });
+  });
