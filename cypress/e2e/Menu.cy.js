@@ -1,10 +1,15 @@
 describe('Hjemmeside tester', () => {
-    it('Verifiser at hjemmesiden laster korrekt', () => {
+    it('Test NO menu', () => {
         cy.visit('/');
-        cy.url().should('contains', 'Yrkesfiske');
-        cy.url().should('contains', 'Akvakultur');
-        cy.url().should('contains', 'Areal-og-miljo');
-        cy.url().should('contains', 'Fritidsfiske');
-        cy.url().should('contains', 'Turistfiske');
+        cy.contains('Fiskeridirektoratet').should('be.visible');  // Sjekk at teksten "Fiskeridirektoratet" er synlig
+        cy.contains('Akvakultur').should('be.visible'); 
+        cy.contains('Yrkesfiske').should('be.visible'); 
+        cy.contains('Areal og miljø').should('be.visible'); 
+        cy.contains('Fritidsfiske').should('be.visible'); 
+        cy.contains('Turistfiske').should('be.visible'); 
+        cy.contains('Logg inn').should('be.visible'); 
+        cy.contains('Søk').should('be.visible'); 
+      
+
     });
 });
