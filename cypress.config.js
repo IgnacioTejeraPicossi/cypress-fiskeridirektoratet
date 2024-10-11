@@ -11,8 +11,8 @@ module.exports = defineConfig({
       // Legg til event-håndterere hvis nødvendig
     },
     env: {
-      username: 'ignacio.tejera@item.no',
-      password: '796rafraITP',
+      username: 'xxxxxx', //Include here your username
+      password: 'yyyyy',//Include here your password
     },
   },
   reporter: 'mochawesome',
