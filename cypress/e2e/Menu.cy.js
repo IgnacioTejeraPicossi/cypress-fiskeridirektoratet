@@ -15,7 +15,7 @@ describe('Hjemmeside tester no', () => {
 });
 
 describe('Hjemmeside tester eng', () => {
-    it('Test NO menu', () => {
+    it('Test Eng menu', () => {
         cy.visit('http://localhost:8080/site/default/master/eng');
         cy.contains('Directorate of Fisheries').should('be.visible');  // Sjekk at teksten "Fiskeridirektoratet" er synlig
         cy.contains('Fisheries').should('be.visible'); 
