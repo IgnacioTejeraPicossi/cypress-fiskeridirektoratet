@@ -6,7 +6,7 @@ module.exports = defineConfig({
     baseUrl: 'http://localhost:8080/site/default/master/no',  // Angi URL for lokal installasjon
     viewportWidth: 1280,                  // Sett skjermstørrelse (bredde)
     viewportHeight: 720,                  // Sett skjermstørrelse (høyde)
-    experimentalSessionAndOrigin: true, // Aktiverer eksperimentelle funksjoner
+    //experimentalSessionAndOrigin: true, // Aktiverer eksperimentelle funksjoner
     setupNodeEvents(on, config) {
       // Legg til event-håndterere hvis nødvendig
     },
