@@ -12,6 +12,21 @@ describe('Hjemmeside tester no', () => {
       
     });
 
+    it('Test NO under menu Yrkesfiske', () => {
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske');
+        cy.contains('Yrkesfiske').should('be.visible');
+           /* ==== Test meny opsjon ==== */
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske/Rapportering-paa-havet');
+        cy.get('[class="btn-nav__title"]').click();
+        cy.contains('Rapportering på havet');           
+              
+		
+      });
+
+
+
 });
 
 describe('Hjemmeside tester eng', () => {
