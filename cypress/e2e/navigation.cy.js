@@ -1,11 +1,10 @@
 describe('Navigasjonstester', () => {
     it('Naviger til kontakt-siden', () => {
       cy.visit('/');
-      cy.get('[href="/https://sikker.fiskeridir.no/minside/"]').click();  // Klikk på lenken til "Yrkesfiske" siden
-      cy.url().should('include', '/ID-porten logo');  // Bekreft at URL-en inkluderer /kontakt
+      cy.get('[href="/site/default/master/no/Yrkesfiske/Rapportering-paa-havet"]').click();  // Klikk på lenken til "Yrkesfiske" siden
+      cy.url().should('include', 'Norsk');  // Bekreft at URL-en inkluderer /kontakt
     });
   });
-
 
   //<a class="btn btn-primary active" href="/Yrkesfiske">
   //              Yrkesfiske
