@@ -19,7 +19,9 @@ describe('Hjemmeside tester no', () => {
            /* ==== Test meny opsjon ==== */
         cy.visit('/');
         cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske/Rapportering-paa-havet');
-        cy.get('[class="btn-nav__title"]').click();
+        cy.get('[class="btn-nav__title"]').eq(0).click();
+
+        //cy.get('.btn.btn--searchsubmit').eq(0).click()
         cy.contains('Rapportering på havet');           
               
 		
@@ -40,5 +42,18 @@ describe('Hjemmeside tester eng', () => {
         cy.contains('Search').should('be.visible'); 
       
     });
+    it('Test Eng menu Fisheries', () => {
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/eng/Fisheries');
+        cy.contains('Fisheries').should('be.visible');
+           /* ==== Test meny opsjon ==== */
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske/Rapportering-paa-havet');
+        cy.get('[class="btn-nav__title"]').eq(0).click();
+      
+        cy.contains('Rapportering på havet');           
+         
+		
+      });
 
 });
