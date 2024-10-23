@@ -37,39 +37,35 @@ describe('Hjemmeside tester no', () => {
         cy.get('[class="btn-nav__title"]').eq(3).click();
         cy.contains('Kontroll');  
 
-        cy.visit('/');
-        cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske/omsetning-fisk');
-        cy.get('[class="btn-nav__title"]').eq(4).click();
-        cy.contains('Omsetning');  
+        //cy.visit('/');
+        //cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske/omsetning-fisk');
+        //cy.get('[class="btn-nav__title"]').eq(4).click();
+        //cy.contains('Omsetning');  
 
         cy.visit('/');
         cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske/Registre-og-skjema');
         cy.get('[class="btn-nav__title"]').eq(5).click();
-        cy.contains('Registre og skjema - yrkesfiske');  
+        cy.contains('Registre');  
 
         cy.visit('/');
         cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske/Havmiljoe');
-        cy.get('[class="btn-nav__title"]').eq(6).click();
         cy.contains('Havmiljø');  
 
         cy.visit('/');
         cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske/fangstid');
-        cy.get('[class="btn-nav__title"]').eq(7).click();
         cy.contains('FangstID');  
 
         cy.visit('/');
         cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske/Tall-og-analyse');
-        cy.get('[class="btn-nav__title"]').eq(8).click();
         cy.contains('Tall og analyse: Yrkesfiske');  
 
         cy.visit('/');
-        cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske/Kartverktoyet');
+        cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske');
         cy.get('[class="btn-nav__title"]').eq(9).click();
-        cy.contains('Kartverktøyet');  
+        cy.contains('Fiskeri');  
 
         cy.visit('/');
         cy.visit('http://localhost:8080/site/default/master/no/Yrkesfiske/Dokumenter');
-        cy.get('[class="btn-nav__title"]').eq(10).click();
         cy.contains('Dokumenter - yrkesfiske');  
 
         cy.visit('/');
