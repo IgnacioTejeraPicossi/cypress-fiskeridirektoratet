@@ -15,15 +15,31 @@ describe('Hjemmeside tester eng', () => {
         cy.contains('Fisheries').should('be.visible');
         
         /* ==== Test sub meny opsjoner ==== */
-        //cy.visit('/');
-        cy.visit('http://localhost:8080/admin/site/preview/default/draft/eng/Fisheries');
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/eng/Fisheries');
         cy.get('[class="btn-nav__title"]').eq(0).click();
         cy.contains('Norwegian Fisheries Management').should('be.visible');       
         
         //cy.visit('/');
-        cy.visit('http://localhost:8080/admin/site/preview/default/draft/eng/Fisheries');
+        cy.visit('http://localhost:8080/site/default/master/eng/Fisheries');
         cy.get('[class="btn-nav__title"]').eq(1).click();
-        cy.contains('Control and enforcementt');       
+        cy.contains('Control and enforcement');       
+
+        cy.visit('http://localhost:8080/site/default/master/eng/Fisheries');
+        cy.get('[class="btn-nav__title"]').eq(2).click();
+        cy.contains('Norwegian conversion factors');   
+
+        cy.visit('http://localhost:8080/site/default/master/eng/Fisheries');
+        cy.get('[class="btn-nav__title"]').eq(3).click();
+        cy.contains('Evaluation of Norway');   
+
+        cy.visit('http://localhost:8080/site/default/master/eng/Fisheries');
+        cy.get('[class="btn-nav__title"]').eq(4).click();
+        cy.contains('Regulations');   
+
+        cy.visit('http://localhost:8080/site/default/master/eng/Fisheries');
+        cy.get('[class="btn-nav__title"]').eq(5).click();
+        cy.contains('Statistics for fisheries');   
       	
       });
 
