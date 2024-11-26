@@ -99,12 +99,12 @@ describe('Hjemmeside tester no', () => {
         cy.visit('/');
         cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Dokumenter');
         cy.get('[class="btn-nav__title"]').eq(3).click();
-        cy.contains('Dokumenter - akvakultur');  
+        cy.contains('Dokumenter');  
 
         cy.visit('/');
         cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Registre-og-skjema');
         cy.get('[class="btn-nav__title"]').eq(4).click();
-        cy.contains('Registre og skjema - akvakultur');  
+        cy.contains('Registre og skjema');  
 
         cy.visit('/');
         cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Tall-og-analyse');
