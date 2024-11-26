@@ -76,5 +76,49 @@ describe('Hjemmeside tester no', () => {
 	
       });
 
+      it('Test NO under menu Akvakultur', () => {
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/no/Akvakultur');
+        cy.contains('Akvakultur').should('be.visible');
+           /* ==== Test meny opsjon ==== */
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Tildeling-og-tillatelser');
+        cy.get('[class="btn-nav__title"]').eq(0).click();
+        cy.contains('Tildeling og tillatelser');        
+        
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Drift-og-tilsyn');
+        cy.get('[class="btn-nav__title"]').eq(1).click();
+        cy.contains('Drift og tilsyn');  
+        
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Delt-kunnskap-og-erfaring');
+        cy.get('[class="btn-nav__title"]').eq(2).click();
+        cy.contains('Delt kunnskap og erfaring');  
+
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Dokumenter');
+        cy.get('[class="btn-nav__title"]').eq(3).click();
+        cy.contains('Dokumenter - akvakultur');  
+
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Registre-og-skjema');
+        cy.get('[class="btn-nav__title"]').eq(4).click();
+        cy.contains('Registre og skjema - akvakultur');  
+
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Tall-og-analyse');
+        cy.get('[class="btn-nav__title"]').eq(5).click();
+        cy.contains('Tall og analyse');  
+
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Tema');
+        cy.contains('Tema');  
+
+        cy.visit('/');
+        cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Akvakulturloven-og-forskrifter');
+        cy.contains('Akvakulturloven og forskrifter');  
+      });
+
 });
 
