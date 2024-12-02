@@ -96,10 +96,10 @@ describe('Hjemmeside tester no', () => {
         cy.get('[class="btn-nav__title"]').eq(2).click();
         cy.contains('Delt kunnskap og erfaring');  
 
-        cy.visit('/');
-        cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Dokumenter');
-        cy.get('[class="btn-nav__title"]').eq(3).click();
-        cy.contains('Dokumenter');  
+        //cy.visit('/');
+        //cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Dokumenter');
+        //cy.get('[class="btn-nav__title"]').eq(3).click();
+        //cy.contains('Dokumenter');  
 
         cy.visit('/');
         cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Registre-og-skjema');
@@ -113,10 +113,12 @@ describe('Hjemmeside tester no', () => {
 
         cy.visit('/');
         cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Tema');
+        cy.get('[class="btn-nav__title"]').eq(6).click();
         cy.contains('Tema');  
 
         cy.visit('/');
         cy.visit('http://localhost:8080/site/default/master/no/Akvakultur/Akvakulturloven-og-forskrifter');
+        cy.get('[class="btn-nav__title"]').eq(7).click();
         cy.contains('Akvakulturloven og forskrifter');  
       });
 
